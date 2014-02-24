@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Drum</title>
+		<meta name="description" content="Web based drum machine by Brett Mohr" />
+		<meta name="author" content="Brett Mohr" />
+		<meta property="og:url" content="http://brettmohr.net/drum" />
+		<meta property="og:image" content="http://brettmohr.net/drumkit/drum-icon.jpg" />
+		<meta property="og:title" content="Drum" />
+		<meta property="og:description"content="Web based drum machine by Brett Mohr"/>
+		<meta name="viewport" content="width=device-width" initial-scale="1.0" />
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="drumkit/css/drum.min.css">
+		<link type="text/css" rel="stylesheet" href="drumkit/css/ui.min.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7/jquery-ui.min.js"></script>
+		
+
+	</head>
+
+	<body>
+			<header>
+				<h1>Drum</h1>
+				<ul id="controls">
+					<li><button id="soundstart">
+						<span id="start">Start</span>
+						<span id="stop" class="hide">Stop</span>
+						</button>
+					</li>
+					<li><button id="clearall">Reset</button></li>
+				</ul>
+			</header>
+
+<section id="content">
+			<section id="drumkit">
+
+				<ul id="tempoControl">
+					<li>
+						<label id="tempoDisplay">Tempo: <span id="tempovalue"></span> <abbr title="Beats per minute">BPM</abbr></label>
+						<div id="temposlider"></div>
+					</li>
+				</ul> <!-- #controls -->
+				
+				<ul id="lights">
+					<li>
+						<ul id="tracker" class="soundrow">
+							<li class="header"></li><li class="pip col_0">tracker_0</li><li class="pip col_1">tracker_1</li><li class="pip col_2">tracker_2</li><li class="pip col_3">tracker_3</li><li class="pip col_4">tracker_4</li><li class="pip col_5">tracker_5</li><li class="pip col_6">tracker_6</li><li class="pip col_7">tracker_7</li><li class="pip col_8">tracker_8</li><li class="pip col_9">tracker_9</li><li class="pip col_10">tracker_0</li><li class="pip col_11">tracker_1</li><li class="pip col_12">tracker_2</li><li class="pip col_13">tracker_3</li><li class="pip col_14">tracker_4</li><li class="pip col_15">tracker_5</li>
+						</ul>
+					</li>
+				</ul> <!-- #lights -->
+
+			</section><!-- #drumkit -->
+
+		</section> <!-- #content -->
+		<section id="sounds">
+<audio id="sound_bass_hit" title="Bass" autobuffer><source src="drumkit/sounds/Bass Hit.wav" type="audio/x-wav"><source src="drumkit/sounds/Bass Hit.ogg" type="application/ogg"><source src="drumkit/sounds/Bass Hit.mp3" type="audio/mpeg"></audio>
+<audio id="sound_clap" title="Clap" autobuffer><source src="drumkit/sounds/Clap.wav" type="audio/x-wav"><source src="drumkit/sounds/Clap.ogg" type="application/ogg"><source src="drumkit/sounds/Clap.mp3" type="audio/mpeg"></audio>
+<audio id="sound_cow_bell" title="Cow Bell" autobuffer><source src="drumkit/sounds/Cow Bell.wav" type="audio/x-wav"><source src="drumkit/sounds/Cow Bell.ogg" type="application/ogg"><source src="drumkit/sounds/Cow Bell.mp3" type="audio/mpeg"></audio>
+<audio id="sound_crash_cymbal" title="Crash" autobuffer><source src="drumkit/sounds/Crash Cymbal.wav" type="audio/x-wav"><source src="drumkit/sounds/Crash Cymbal.ogg" type="application/ogg"><source src="drumkit/sounds/Crash Cymbal.mp3" type="audio/mpeg"></audio>
+<audio id="sound_hi_hat_closed" title="Hi Hat Closed" autobuffer><source src="drumkit/sounds/Hi Hat Closed.wav" type="audio/x-wav"><source src="drumkit/sounds/Hi Hat Closed.ogg" type="application/ogg"><source src="drumkit/sounds/Hi Hat Closed.mp3" type="audio/mpeg"></audio>
+<audio id="sound_hi_hat_long" title="Hi Hat Open" autobuffer><source src="drumkit/sounds/Hi Hat Long.wav" type="audio/x-wav"><source src="drumkit/sounds/Hi Hat Long.ogg" type="application/ogg"><source src="drumkit/sounds/Hi Hat Long.mp3" type="audio/mpeg"></audio>
+<audio id="sound_hi_hat_short" title="Hi Hat Reversed" autobuffer><source src="drumkit/sounds/Hi Hat Short.wav" type="audio/x-wav"><source src="drumkit/sounds/Hi Hat Short.ogg" type="application/ogg"><source src="drumkit/sounds/Hi Hat Short.mp3" type="audio/mpeg"></audio>
+<audio id="sound_rimshot" title="Rimshot" autobuffer><source src="drumkit/sounds/Rimshot.wav" type="audio/x-wav"><source src="drumkit/sounds/Rimshot.ogg" type="application/ogg"><source src="drumkit/sounds/Rimshot.mp3" type="audio/mpeg"></audio>
+<audio id="sound_snare_1" title="Snare 1" autobuffer><source src="drumkit/sounds/Snare 1.wav" type="audio/x-wav"><source src="drumkit/sounds/Snare 1.ogg" type="application/ogg"><source src="drumkit/sounds/Snare 1.mp3" type="audio/mpeg"></audio>
+<audio id="sound_snare_2" title="Snare 2" autobuffer><source src="drumkit/sounds/Snare 2.wav" type="audio/x-wav"><source src="drumkit/sounds/Snare 2.ogg" type="application/ogg"><source src="drumkit/sounds/Snare 2.mp3" type="audio/mpeg"></audio>
+<audio id="sound_tambourine" title="Shaker" autobuffer><source src="drumkit/sounds/Tambourine.wav" type="audio/x-wav"><source src="drumkit/sounds/Tambourine.ogg" type="application/ogg"><source src="drumkit/sounds/Tambourine.mp3" type="audio/mpeg"></audio>
+<audio id="sound_tom_hi" title="Tom Hi" autobuffer><source src="drumkit/sounds/Tom Hi.wav" type="audio/x-wav"><source src="drumkit/sounds/Tom Hi.ogg" type="application/ogg"><source src="drumkit/sounds/Tom Hi.mp3" type="audio/mpeg"></audio>
+<audio id="sound_tom_mid" title="Tom Mid" autobuffer><source src="drumkit/sounds/Tom Mid.wav" type="audio/x-wav"><source src="drumkit/sounds/Tom Mid.ogg" type="application/ogg"><source src="drumkit/sounds/Tom Mid.mp3" type="audio/mpeg"></audio>
+<audio id="sound_tom_low" title="Tom Low" autobuffer><source src="drumkit/sounds/Tom Low.wav" type="audio/x-wav"><source src="drumkit/sounds/Tom Low.ogg" type="application/ogg"><source src="drumkit/sounds/Tom Low.mp3" type="audio/mpeg"></audio>
+		</section>
+
+			<footer>
+				<span>&copy; 2014 <a href="http://brettmohr.net" target="_blank">Brett Mohr</a></span>
+			</footer>
+	</body>
+	
+	<script type="text/javascript" src="drumkit/js/drum.min.js"></script>
+
+</html>
